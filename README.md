@@ -30,4 +30,4 @@ Website interaktif untuk mengonversi suhu antara **Celsius** dan **Fahrenheit**,
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/RizqiJagad/temperature-converter.git
+   git clone https://github.com/revou-fundamental-course/19-may-25-RizqiJagad
