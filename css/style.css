@@ -1,0 +1,200 @@
+/* css/style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+label, input, select, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 0.5em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result, #explanation {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+#resetBtn {
+  background-color: #dc3545;
+}
+
+#resetBtn:hover {
+  background-color: #a71d2a;
+}
+
+/* Toggle Switch */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+input:checked + .slider {
+  background-color: #007BFF;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.result-box {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 1em;
+}
+
+body.dark .result-box {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+
+/* Dark Mode Styling */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark input,
+body.dark select,
+body.dark button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+#scienceNote {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #e9ecef;
+  border-left: 4px solid #007BFF;
+  border-radius: 4px;
+}
+
+body.dark #scienceNote {
+  background-color: #2a2a2a;
+  border-left: 4px solid #66b2ff;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Responsive untuk layar mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 1em;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  label, input, select, button {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 0.6em;
+  }
+
+  #scienceNote {
+    font-size: 0.9em;
+  }
+}
